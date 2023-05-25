@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Cadastro</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/app/js/default.js"></script>
+    <link rel="stylesheet" href="app/css/default.css">
+</head>
+<body>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'cadastrar')">Cadastrar</button>
+        <button class="tablinks" onclick="openTab(event, 'vizualiar')">Vizualiar</button>
+        <button class="tablinks" onclick="openTab(event, 'procurar')">Procurar</button>
+    </div>
+
+    <div id="cadastrar" class="tabcontent">
+        <div id="form-cadastro">
+            <p>Formulário de Cadastro de Pessoa</p>
+            <form id="cadastroForm">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+                <input type="submit" value="Cadastrar">
+            </form>
+            <span id="resultado"></span>
+        </div>
+    </div>
+
+    <div id="vizualiar" class="tabcontent">
+        <div id="lista-pessoas">
+            <table class="table-pessoas">
+                <thead>
+                    <th>Nome</th>
+                    <th>NIS</th>
+                </thead>
+                <tbody id="table-pessoas-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="procurar" class="tabcontent">
+        <form id="formSearch">
+            <div>
+                <div>
+                    <label>Filtrar por:</label>
+                    
+                </div>
+                <div>
+                    <input type="radio" id="radio-nome" value="1" name="criterio-busca"><label for="radio-nome">Nome</label>
+                    <br>
+                    <input type="radio" id="radio-nis" value="2" name="criterio-busca"><label for="radio-nis">NIS</label>
+                </div>
+            </div>
+            <div>
+                <label>Buscar por</label>
+                <input type="text" name="valor-busca" id="valorBusca" required>
+            </div>
+            <input type="submit" value="Procurar">
+        </form>
+        <table class="table-pessoas">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>NIS</th>
+                </tr>
+            </thead>
+            <tbody id="table-busca-body">
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>

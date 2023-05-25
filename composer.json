@@ -1,0 +1,17 @@
+{
+    "name": "gui/cadastro-pessoa",
+    "description": "cadastro de pessoa física simples feito para o desafio do GESUAS",
+    "autoload": {
+        "psr-4": {
+            "Gui\\CadastroPessoa\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.1"
+    }
+}
